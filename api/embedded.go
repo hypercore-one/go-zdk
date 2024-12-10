@@ -1,8 +1,8 @@
 package api
 
 import (
-	"github.com/ignition-pillar/go-zdk/api/embedded"
-	"github.com/ignition-pillar/go-zdk/client"
+	"github.com/hypercore-one/go-zdk/api/embedded"
+	"github.com/hypercore-one/go-zdk/client"
 )
 
 type EmbeddedApi struct {

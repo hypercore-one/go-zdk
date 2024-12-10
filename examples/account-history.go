@@ -8,8 +8,8 @@ import (
 	"math"
 	"strings"
 
-	"github.com/ignition-pillar/go-zdk/client"
-	"github.com/ignition-pillar/go-zdk/zdk"
+	"github.com/hypercore-one/go-zdk/client"
+	"github.com/hypercore-one/go-zdk/zdk"
 	"github.com/zenon-network/go-zenon/common/types"
 )
 

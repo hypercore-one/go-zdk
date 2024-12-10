@@ -1,7 +1,7 @@
 package api
 
 import (
-	"github.com/ignition-pillar/go-zdk/client"
+	"github.com/hypercore-one/go-zdk/client"
 	"github.com/zenon-network/go-zenon/chain/nom"
 	"github.com/zenon-network/go-zenon/common/types"
 	"github.com/zenon-network/go-zenon/rpc/api"

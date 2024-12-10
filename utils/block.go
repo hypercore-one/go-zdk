@@ -5,8 +5,8 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/ignition-pillar/go-zdk/wallet"
-	"github.com/ignition-pillar/go-zdk/zdk"
+	"github.com/hypercore-one/go-zdk/wallet"
+	"github.com/hypercore-one/go-zdk/zdk"
 	"github.com/zenon-network/go-zenon/chain/nom"
 	"github.com/zenon-network/go-zenon/common/types"
 	"github.com/zenon-network/go-zenon/pow"

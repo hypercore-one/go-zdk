@@ -1,8 +1,8 @@
 package zdk
 
 import (
-	"github.com/ignition-pillar/go-zdk/api"
-	"github.com/ignition-pillar/go-zdk/client"
+	"github.com/hypercore-one/go-zdk/api"
+	"github.com/hypercore-one/go-zdk/client"
 )
 
 type Zdk struct {
