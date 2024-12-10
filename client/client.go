@@ -44,7 +44,7 @@ func QToken(zts types.ZenonTokenStandard) Option {
 }
 
 func NewClient(url string, opts ...Option) (Client, error) {
-	c := client{protocolVersion: 1, chainIdentifier: 1}
+	c := client{protocolVersion: 1, chainIdentifier: 1, zToken: types.ZnnTokenStandard, qToken: types.QsrTokenStandard}
 	for _, opt := range opts {
 		opt(&c)
 	}
