@@ -85,7 +85,7 @@ func (s SentinelApi) Register() (*nom.AccountBlock, error) {
 		s.c.ProtocolVersion(),
 		s.c.ChainIdentifier(),
 		types.SentinelContract,
-		types.ZnnTokenStandard,
+		s.c.ZToken(),
 		constants.SentinelZnnRegisterAmount,
 		data,
 	), nil
@@ -100,7 +100,7 @@ func (s SentinelApi) Revoke() (*nom.AccountBlock, error) {
 		s.c.ProtocolVersion(),
 		s.c.ChainIdentifier(),
 		types.SentinelContract,
-		types.ZnnTokenStandard,
+		s.c.ZToken(),
 		common.Big0,
 		data,
 	), nil
@@ -116,7 +116,7 @@ func (s SentinelApi) CollectReward() (*nom.AccountBlock, error) {
 		s.c.ProtocolVersion(),
 		s.c.ChainIdentifier(),
 		types.SentinelContract,
-		types.ZnnTokenStandard,
+		s.c.ZToken(),
 		common.Big0,
 		data,
 	), nil
@@ -131,7 +131,7 @@ func (s SentinelApi) DepositQsr(amount *big.Int) (*nom.AccountBlock, error) {
 		s.c.ProtocolVersion(),
 		s.c.ChainIdentifier(),
 		types.SentinelContract,
-		types.QsrTokenStandard,
+		s.c.QToken(),
 		amount,
 		data,
 	), nil
@@ -146,7 +146,7 @@ func (s SentinelApi) WithdrawQsr() (*nom.AccountBlock, error) {
 		s.c.ProtocolVersion(),
 		s.c.ChainIdentifier(),
 		types.SentinelContract,
-		types.ZnnTokenStandard,
+		s.c.ZToken(),
 		common.Big0,
 		data,
 	), nil

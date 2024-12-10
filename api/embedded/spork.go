@@ -45,7 +45,7 @@ func (s SporkApi) Create(name string, description string) (*nom.AccountBlock, er
 		s.c.ProtocolVersion(),
 		s.c.ChainIdentifier(),
 		types.SporkContract,
-		types.ZnnTokenStandard,
+		s.c.ZToken(),
 		common.Big0,
 		data,
 	), nil
@@ -63,7 +63,7 @@ func (s SporkApi) Activate(id types.Hash) (*nom.AccountBlock, error) {
 		s.c.ProtocolVersion(),
 		s.c.ChainIdentifier(),
 		types.SporkContract,
-		types.ZnnTokenStandard,
+		s.c.ZToken(),
 		common.Big0,
 		data,
 	), nil

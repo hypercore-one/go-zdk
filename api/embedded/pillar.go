@@ -146,7 +146,7 @@ func (p PillarApi) Register(name string, producerAddress types.Address, rewardAd
 		p.c.ProtocolVersion(),
 		p.c.ChainIdentifier(),
 		types.PillarContract,
-		types.ZnnTokenStandard,
+		p.c.ZToken(),
 		constants.PillarStakeAmount,
 		data,
 	), nil
@@ -170,7 +170,7 @@ func (p PillarApi) RegisterLegacy(name string, producerAddress types.Address, re
 		p.c.ProtocolVersion(),
 		p.c.ChainIdentifier(),
 		types.PillarContract,
-		types.ZnnTokenStandard,
+		p.c.ZToken(),
 		constants.PillarStakeAmount,
 		data,
 	), nil
@@ -192,7 +192,7 @@ func (p PillarApi) UpdatePillar(name string, producerAddress types.Address, rewa
 		p.c.ProtocolVersion(),
 		p.c.ChainIdentifier(),
 		types.PillarContract,
-		types.ZnnTokenStandard,
+		p.c.ZToken(),
 		common.Big0,
 		data,
 	), nil
@@ -210,7 +210,7 @@ func (p PillarApi) Revoke(name string) (*nom.AccountBlock, error) {
 		p.c.ProtocolVersion(),
 		p.c.ChainIdentifier(),
 		types.PillarContract,
-		types.ZnnTokenStandard,
+		p.c.ZToken(),
 		common.Big0,
 		data,
 	), nil
@@ -228,7 +228,7 @@ func (p PillarApi) Delegate(name string) (*nom.AccountBlock, error) {
 		p.c.ProtocolVersion(),
 		p.c.ChainIdentifier(),
 		types.PillarContract,
-		types.ZnnTokenStandard,
+		p.c.ZToken(),
 		common.Big0,
 		data,
 	), nil
@@ -243,7 +243,7 @@ func (p PillarApi) Undelegate() (*nom.AccountBlock, error) {
 		p.c.ProtocolVersion(),
 		p.c.ChainIdentifier(),
 		types.PillarContract,
-		types.ZnnTokenStandard,
+		p.c.ZToken(),
 		common.Big0,
 		data,
 	), nil
@@ -259,7 +259,7 @@ func (p PillarApi) CollectReward() (*nom.AccountBlock, error) {
 		p.c.ProtocolVersion(),
 		p.c.ChainIdentifier(),
 		types.PillarContract,
-		types.ZnnTokenStandard,
+		p.c.ZToken(),
 		common.Big0,
 		data,
 	), nil
@@ -274,7 +274,7 @@ func (p PillarApi) DepositQsr(amount *big.Int) (*nom.AccountBlock, error) {
 		p.c.ProtocolVersion(),
 		p.c.ChainIdentifier(),
 		types.PillarContract,
-		types.QsrTokenStandard,
+		p.c.QToken(),
 		amount,
 		data,
 	), nil
@@ -289,7 +289,7 @@ func (p PillarApi) WithdrawQsr() (*nom.AccountBlock, error) {
 		p.c.ProtocolVersion(),
 		p.c.ChainIdentifier(),
 		types.PillarContract,
-		types.ZnnTokenStandard,
+		p.c.ZToken(),
 		common.Big0,
 		data,
 	), nil

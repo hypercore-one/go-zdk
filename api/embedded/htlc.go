@@ -80,7 +80,7 @@ func (s HtlcApi) Reclaim(id types.Hash) (*nom.AccountBlock, error) {
 		s.c.ProtocolVersion(),
 		s.c.ChainIdentifier(),
 		types.HtlcContract,
-		types.ZnnTokenStandard,
+		s.c.ZToken(),
 		common.Big0,
 		data,
 	), nil
@@ -98,7 +98,7 @@ func (s HtlcApi) Unlock(id types.Hash) (*nom.AccountBlock, error) {
 		s.c.ProtocolVersion(),
 		s.c.ChainIdentifier(),
 		types.HtlcContract,
-		types.ZnnTokenStandard,
+		s.c.ZToken(),
 		common.Big0,
 		data,
 	), nil
@@ -115,7 +115,7 @@ func (s HtlcApi) DenyProxyUnlock() (*nom.AccountBlock, error) {
 		s.c.ProtocolVersion(),
 		s.c.ChainIdentifier(),
 		types.HtlcContract,
-		types.ZnnTokenStandard,
+		s.c.ZToken(),
 		common.Big0,
 		data,
 	), nil
@@ -132,7 +132,7 @@ func (s HtlcApi) AllowProxyUnlock() (*nom.AccountBlock, error) {
 		s.c.ProtocolVersion(),
 		s.c.ChainIdentifier(),
 		types.HtlcContract,
-		types.ZnnTokenStandard,
+		s.c.ZToken(),
 		common.Big0,
 		data,
 	), nil

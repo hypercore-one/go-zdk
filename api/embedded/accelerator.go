@@ -85,7 +85,7 @@ func (a AcceleratorApi) CreateProject(name string, description string, url strin
 		a.c.ProtocolVersion(),
 		a.c.ChainIdentifier(),
 		types.AcceleratorContract,
-		types.ZnnTokenStandard,
+		a.c.ZToken(),
 		constants.ProjectCreationAmount,
 		data,
 	), nil
@@ -108,7 +108,7 @@ func (a AcceleratorApi) AddPhase(id types.Hash, name string, description string,
 		a.c.ProtocolVersion(),
 		a.c.ChainIdentifier(),
 		types.AcceleratorContract,
-		types.ZnnTokenStandard,
+		a.c.ZToken(),
 		common.Big0,
 		data,
 	), nil
@@ -131,7 +131,7 @@ func (a AcceleratorApi) UpdatePhase(id types.Hash, name string, description stri
 		a.c.ProtocolVersion(),
 		a.c.ChainIdentifier(),
 		types.AcceleratorContract,
-		types.ZnnTokenStandard,
+		a.c.ZToken(),
 		common.Big0,
 		data,
 	), nil
@@ -166,7 +166,7 @@ func (a AcceleratorApi) VoteByName(id types.Hash, pillarName string, vote uint8)
 		a.c.ProtocolVersion(),
 		a.c.ChainIdentifier(),
 		types.AcceleratorContract,
-		types.ZnnTokenStandard,
+		a.c.ZToken(),
 		common.Big0,
 		data,
 	), nil
@@ -185,7 +185,7 @@ func (a AcceleratorApi) VoteByProdAddress(id types.Hash, vote uint8) (*nom.Accou
 		a.c.ProtocolVersion(),
 		a.c.ChainIdentifier(),
 		types.AcceleratorContract,
-		types.ZnnTokenStandard,
+		a.c.ZToken(),
 		common.Big0,
 		data,
 	), nil

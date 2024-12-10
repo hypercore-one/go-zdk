@@ -55,7 +55,7 @@ func (p PlasmaApi) Fuse(beneficiary types.Address, amount *big.Int) (*nom.Accoun
 		p.c.ProtocolVersion(),
 		p.c.ChainIdentifier(),
 		types.PlasmaContract,
-		types.QsrTokenStandard,
+		p.c.QToken(),
 		amount,
 		data,
 	), nil
@@ -73,7 +73,7 @@ func (p PlasmaApi) Cancel(id types.Hash) (*nom.AccountBlock, error) {
 		p.c.ProtocolVersion(),
 		p.c.ChainIdentifier(),
 		types.PlasmaContract,
-		types.ZnnTokenStandard,
+		p.c.ZToken(),
 		common.Big0,
 		data,
 	), nil

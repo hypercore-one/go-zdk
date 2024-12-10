@@ -86,7 +86,7 @@ func (t *TokenApi) IssueToken(
 		t.client.ProtocolVersion(),
 		t.client.ChainIdentifier(),
 		types.TokenContract,
-		types.ZnnTokenStandard,
+		t.client.ZToken(),
 		constants.TokenIssueAmount,
 		data,
 	), nil
@@ -106,7 +106,7 @@ func (t *TokenApi) MintToken(zts types.ZenonTokenStandard, amount *big.Int, rece
 		t.client.ProtocolVersion(),
 		t.client.ChainIdentifier(),
 		types.TokenContract,
-		types.ZnnTokenStandard,
+		t.client.ZToken(),
 		common.Big0,
 		data,
 	), nil
@@ -142,7 +142,7 @@ func (t *TokenApi) UpdateToken(zts types.ZenonTokenStandard, owner types.Address
 		t.client.ProtocolVersion(),
 		t.client.ChainIdentifier(),
 		types.TokenContract,
-		types.ZnnTokenStandard,
+		t.client.ZToken(),
 		common.Big0,
 		data,
 	), nil

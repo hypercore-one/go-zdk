@@ -54,7 +54,7 @@ func (s SwapApi) RetrieveAssets(pubKey string, signature string) (*nom.AccountBl
 		s.c.ProtocolVersion(),
 		s.c.ChainIdentifier(),
 		types.SwapContract,
-		types.ZnnTokenStandard,
+		s.c.ZToken(),
 		common.Big0,
 		data,
 	), nil

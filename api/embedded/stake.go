@@ -69,7 +69,7 @@ func (s StakeApi) Stake(durationInSec int64, amount *big.Int) (*nom.AccountBlock
 		s.c.ProtocolVersion(),
 		s.c.ChainIdentifier(),
 		types.StakeContract,
-		types.ZnnTokenStandard,
+		s.c.ZToken(),
 		amount,
 		data,
 	), nil
@@ -87,7 +87,7 @@ func (s StakeApi) Cancel(id types.Hash) (*nom.AccountBlock, error) {
 		s.c.ProtocolVersion(),
 		s.c.ChainIdentifier(),
 		types.StakeContract,
-		types.ZnnTokenStandard,
+		s.c.ZToken(),
 		common.Big0,
 		data,
 	), nil
@@ -103,7 +103,7 @@ func (s StakeApi) CollectReward() (*nom.AccountBlock, error) {
 		s.c.ProtocolVersion(),
 		s.c.ChainIdentifier(),
 		types.StakeContract,
-		types.ZnnTokenStandard,
+		s.c.ZToken(),
 		common.Big0,
 		data,
 	), nil
