@@ -179,3 +179,13 @@ func (l LedgerApi) GetAccountInfoByAddress(address types.Address) (*api.AccountI
 	}
 	return &result, nil
 }
+
+// Meta
+func (l LedgerApi) Meta() (*api.LedgerMetaResponse, error) {
+	var result api.LedgerMetaResponse
+	err := l.c.Call(&result, "ledger.meta")
+	if err != nil {
+		return nil, err
+	}
+	return &result, nil
+}
