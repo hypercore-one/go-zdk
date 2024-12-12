@@ -6,6 +6,7 @@ import (
 )
 
 type Zdk struct {
+	client.Client
 	Ledger    api.LedgerApi
 	Stats     api.StatsApi
 	Embedded  api.EmbeddedApi
@@ -14,6 +15,7 @@ type Zdk struct {
 
 func NewZdk(client client.Client) *Zdk {
 	return &Zdk{
+		Client:    client,
 		Ledger:    api.NewLedgerApi(client),
 		Stats:     api.NewStatsApi(client),
 		Embedded:  api.NewEmbeddedApi(client),
